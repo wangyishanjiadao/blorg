@@ -1,0 +1,146 @@
+
+/* 在现有h1样式中添加背景 */
+h1 {
+    /* 原有样式保持不变 */
+    background-color: rgb(255, 255, 255); /* 添加半透明背景 */
+    padding: 20px;
+}
+
+h1 {
+    color: rgba(36, 39, 242, 0.375);
+        display: flex;
+        justify-content: center; /* 水平居中 */
+}
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    /* 为每个分类添加不同背景色 */
+}
+
+/* 常用工具 */
+h2:first-of-type {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196f3;
+}
+
+/* 学习资源 */
+h2:nth-of-type(2) {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+}
+
+/* 娱乐相关 */
+h2:nth-of-type(3) {
+    background-color: #fff3e0;
+    border-left: 4px solid #ff9800;
+}
+
+/* 其他 */
+h2:last-of-type {
+    background-color: #f3e5f5;
+    border-left: 4px solid #9c27b0;
+}
+
+ul {
+    list-style-type: square;
+    margin: 10px 30px;
+    padding: 15px;
+    border-radius: 6px;
+    /* 为列表添加配套背景色 */
+}
+
+h2:first-of-type + ul {
+    background-color: #f5fbff;
+    border: 1px solid #90caf9;
+}
+
+h2:nth-of-type(2) + ul {
+    background-color: #f5fff7;
+    border: 1px solid #a5d6a7;
+}
+
+h2:nth-of-type(3) + ul {
+    background-color: #fff8f0;
+    border: 1px solid #ffcc80;
+}
+
+h2:last-of-type + ul {
+    background-color: #fcf3ff;
+    border: 1px solid #ce93d8;
+}
+
+/* 列表样式 */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* 链接样式 */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.city-class{
+    color: rgb(224, 21, 170);
+}
+img {
+    /* 设置图片的宽度 */
+    width: 300px;
+    /* 设置图片的高度 */
+    height: 300px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+img:hover {
+    transform: scale(1.05);/* 悬停放大效果 */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);/* 阴影效果 */
+}
+
+/* 在现有h2样式中添加 */
+h2.collapsible {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-left: 30px; /* 给箭头留空间 */
+}
+
+.arrow {
+    position: absolute;
+    left: 15px;
+    transition: transform 0.2s ease;
+}
+
+/* 在现有ul样式中添加 */
+/* 修改折叠动画实现 */
+ul {
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    /* 初始状态保持展开 */
+    max-height: 1000px; /* 设置足够大的高度值 */
+    opacity: 1;
+}
+
+ul.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.arrow.collapsed {
+    transform: rotate(90deg);
+}
